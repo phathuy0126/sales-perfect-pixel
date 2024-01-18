@@ -1,0 +1,104 @@
+.func {
+    margin-top: 80px;
+    &__content {
+        display: flex;
+        justify-content: center;
+        color: var(--primary-color);
+        gap: 15px;
+
+        .title {
+            font-size: 20px;
+            margin-bottom: 22px;
+        }
+        .list {
+            font-size: 16px;
+            li {
+                margin-bottom: 12px;
+            }
+        }
+    }
+    &__list {
+        &__item {
+            width: 457px;
+            min-height: 200px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__list:nth-child(1) {
+        .func__list__item {
+            &:first-child::after {
+                width: 60px;
+            }
+            &:nth-child(2)::after {
+                width: 60px;
+            }
+            &:nth-child(3)::after {
+                width: 80px;
+            }
+            &:nth-child(4)::after {
+                width: 119px;
+            }
+        }
+    }
+
+    &__list:nth-child(2) {
+        .func__list__item {
+            &:first-child::after {
+                width: 60px;
+            }
+            &:nth-child(2)::after {
+                width: 160px;
+            }
+            &:nth-child(3)::after {
+                width: 179px;
+            }
+        }
+    }
+
+}
+
+//tablet
+@media screen and (max-width: 1279.98px) {
+    .func {
+        &__list {
+            width: 100%;
+            &__item {
+            width: 100%;
+            }
+        }
+    }
+}
+
+//mobile
+@media screen and (max-width: 767.98px) {
+    .func {
+        margin-top: 50px;
+        &__content {
+            .title {
+                font-size: 16px;
+            }
+            .list {
+                li {
+                    font-size: 12px;
+                }
+            }
+        }
+        &__list:nth-child(2) {
+            .func__list__item {
+                &:first-child::after {
+                    width: 60px;
+                }
+                &:nth-child(2)::after {
+                    width: 60px;
+                }
+                &:nth-child(3)::after {
+                    width: 100px;
+                }
+            }
+        }
+    }
+}

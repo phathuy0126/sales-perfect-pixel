@@ -1,0 +1,109 @@
+*,body {
+  font-family: var(--primary-font);
+}
+.wraper {
+  max-width: var(--body-size);
+  margin: 0 auto;
+}
+.container {
+  max-width: calc(var(--container-size) + var(--padding-container));
+  display: flex;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.content {
+  width: calc(100% - var(--nav-size) - var(--spacing-content));
+  margin-top: 30px;
+  margin-left: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+a[href] {
+  text-decoration: none;
+  color: var(--black-color);
+}
+
+button {
+  cursor: pointer;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  margin: 30px 0;
+
+  &__img {
+    margin-right: 20px;
+  }
+
+  &__title {
+    h1 {
+      margin-bottom: 13px;
+      color: var(--primary-color);
+      font-weight: 500;
+      font-size: 26px;
+    }
+
+    .desc {
+      font-size: 16px;
+    }
+  }
+}
+
+.line--top {
+  padding-top: 22px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--primary-color);
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 214px;
+    height: 4px;
+    background: var(--primary-color);
+  }
+}
+
+.title {
+  font-weight: 500;
+}
+
+@media screen and (max-width: 1023.98px) {
+  .content {
+    width: 100%;
+    margin-top: 15px;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .heading {
+
+    &__title {
+      h1 {
+        font-size: 20px;
+      }
+      .desc {
+        margin-right: 10px;
+        font-size: 14px;
+      }
+    }
+  }
+  .line--top {
+    &::after {
+      width: 150px;
+    }
+  }
+}
+
+// sass --watch sass/main.scss css/main.css
